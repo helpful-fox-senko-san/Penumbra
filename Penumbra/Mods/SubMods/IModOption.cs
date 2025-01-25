@@ -11,5 +11,8 @@ public interface IModOption
     public string FullName    { get; }
     public string Description { get; set; }
 
+    /// <summary> Unused in Penumbra but for better TexTools interop. </summary>
+    public string Image { get; set; }
+
     public int GetIndex();
 }

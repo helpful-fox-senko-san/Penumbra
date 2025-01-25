@@ -91,8 +91,11 @@ public readonly struct ModSaveGroup : ISavable
         jWriter.WriteValue(group.Name);
         jWriter.WritePropertyName(nameof(group.Description));
         jWriter.WriteValue(group.Description);
-        jWriter.WritePropertyName(nameof(group.Image));
-        jWriter.WriteValue(group.Image);
+        if (!string.IsNullOrEmpty(group.Image))
+        {
+            jWriter.WritePropertyName(nameof(group.Image));
+            jWriter.WriteValue(group.Image);
+        }
         jWriter.WritePropertyName(nameof(group.Page));
         jWriter.WriteValue(group.Page);
         jWriter.WritePropertyName(nameof(group.Priority));

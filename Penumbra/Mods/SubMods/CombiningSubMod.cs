@@ -12,6 +12,7 @@ public class CombiningSubMod(IModGroup group) : IModOption
 
     public string Name        { get; set; } = "Option";
     public string Description { get; set; } = string.Empty;
+    public string Image       { get; set; } = string.Empty;
 
     public string FullName
         => $"{Group.Name}: {Name}";

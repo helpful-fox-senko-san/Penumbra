@@ -19,6 +19,7 @@ public class SingleSubMod(SingleModGroup singleGroup) : OptionSubMod<SingleModGr
         {
             Name        = Name,
             Description = Description,
+            Image       = Image,
         };
         SubMod.Clone(this, ret);
 
@@ -31,6 +32,7 @@ public class SingleSubMod(SingleModGroup singleGroup) : OptionSubMod<SingleModGr
         {
             Name        = Name,
             Description = Description,
+            Image       = Image,
             Priority    = priority,
         };
         SubMod.Clone(this, ret);

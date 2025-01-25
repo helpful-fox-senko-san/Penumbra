@@ -75,6 +75,7 @@ public static class SubMod
     {
         option.Name        = json[nameof(option.Name)]?.ToObject<string>() ?? string.Empty;
         option.Description = json[nameof(option.Description)]?.ToObject<string>() ?? string.Empty;
+        option.Image       = json[nameof(option.Image)]?.ToObject<string>() ?? string.Empty;
     }
 
     /// <summary> Write file redirections, file swaps and meta manipulations from a data container on a JsonWriter. </summary>
@@ -126,5 +127,10 @@ public static class SubMod
         j.WriteValue(option.Name);
         j.WritePropertyName(nameof(option.Description));
         j.WriteValue(option.Description);
+        if (!string.IsNullOrEmpty(option.Image))
+        {
+            j.WritePropertyName(nameof(option.Image));
+            j.WriteValue(option.Description);
+        }
     }
 }

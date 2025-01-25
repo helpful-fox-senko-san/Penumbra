@@ -30,6 +30,8 @@ public class ImcSubMod(ImcModGroup group) : IModOption
     public ushort AttributeMask;
     public bool   IsDisableSubMod { get; private init; }
 
+    public string Image { get; set; } = string.Empty;
+
     Mod IModOption.Mod
         => Mod;
 
